@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clothing Recommendation</title>
+</head>
+<body>
+    <h1>Clothing Recommendation</h1>
+
+    <!-- 表单输入城市 -->
+    <form method="POST">
+        <label for="city">Enter your city:</label>
+        <input type="text" id="city" name="city">
+        <button type="submit">Get Recommendations</button>
+    </form>
+
+    <!-- 按钮触发图表显示 -->
+    <a href="/show_chart">
+        <button>Show Temperature and Thickness Chart</button>
+    </a>
+
+    <!-- 图表展示位置 -->
+    {% if plot_path %}
+    <div id="chart-container">
+        <img id="chart" src="{{ plot_path }}" style="max-width:100%; height:auto;">
+    </div>
+    {% endif %}
+
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clothing Recommendations</title>
+</head>
+<body>
+    <h1>Recommended Clothing for Today</h1>
+
+    <h2>Weather Information</h2>
+    <p>Current Temperature: {{ clothing.temperature }}°C</p>
+
+    <h2>Pants</h2>
+    {% if clothing.pants %}
+        <p>Clothing Type: {{ clothing.pants.clothing_type }}</p>
+        <p>Season: {{ clothing.pants.season }}</p>
+        <p>Color: {{ clothing.pants.color }}</p>
+        <p>Style: {{ clothing.pants.style }}</p>
+        <p>Material: {{ clothing.pants.material }}</p>
+        <p>Thickness: {{ clothing.pants.thickness }}</p>
+    {% else %}
+        <p>Sorry, no pants recommendations for today.</p>
+    {% endif %}
+
+    <h2>Outerwear</h2>
+    {% if clothing.outerwear %}
+        <p>Clothing Type: {{ clothing.outerwear.clothing_type }}</p>
+        <p>Season: {{ clothing.outerwear.season }}</p>
+        <p>Color: {{ clothing.outerwear.color }}</p>
+        <p>Style: {{ clothing.outerwear.style }}</p>
+        <p>Material: {{ clothing.outerwear.material }}</p>
+        <p>Thickness: {{ clothing.outerwear.thickness }}</p>
+    {% else %}
+        <p>Sorry, no outerwear recommendations for today.</p>
+    {% endif %}
+
+    <h2>Innerwear</h2>
+    {% if clothing.innerwear %}
+        <p>Clothing Type: {{ clothing.innerwear.clothing_type }}</p>
+        <p>Season: {{ clothing.innerwear.season }}</p>
+        <p>Color: {{ clothing.innerwear.color }}</p>
+        <p>Style: {{ clothing.innerwear.style }}</p>
+        <p>Material: {{ clothing.innerwear.material }}</p>
+        <p>Thickness: {{ clothing.innerwear.thickness }}</p>
+    {% else %}
+        <p>Sorry, no innerwear recommendations for today.</p>
+    {% endif %}
+
+    <a href="/">Go Back</a>
+</body>
+</html>
